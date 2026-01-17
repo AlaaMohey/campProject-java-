@@ -16,14 +16,14 @@ import lombok.Setter;
 @Table(name = "bookings")
    
  @Entity
-public class booking  extends baseEnitiy {
+public class booking  extends BaseEnitiy {
      @ManyToOne
     @JoinColumn(name = "camp_id")
-    private camp camp;
+    private Camp camp;
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
-    private camp customer;
+    private Camp customer;
 
     @Enumerated(EnumType.STRING)
     private bookingTypes bookingType = bookingTypes.day_use; // day_use or overnight

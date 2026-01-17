@@ -6,7 +6,8 @@ import java.time.LocalDateTime;
 
     @Getter
     @Setter
-public abstract class baseEnitiy {
+    @MappedSuperclass
+public abstract class BaseEnitiy {
  @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -15,11 +16,11 @@ public abstract class baseEnitiy {
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    @persistence
+    @PrePersist
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
     }
-    @persistence
+    @PreUpdate
     protected void onUpdate() {
         this.updatedAt = LocalDateTime.now();
     }

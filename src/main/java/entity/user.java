@@ -7,16 +7,16 @@ import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
-@Table(name = "users")
+@Table(name = "Users")
 @Getter
 @Setter
-public class user extends baseEnitiy {
+public class User extends BaseEnitiy {
     @Column(nullable = false)
     private String name;
     @Column(unique =  true)
     private String email;
     @Enumerated(EnumType.STRING)
-    private enums.userRole role;
+    private enums.UserRole role;
     private Boolean isActive = true;
 
 }

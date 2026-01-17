@@ -9,6 +9,6 @@ import lombok.Setter;
 @Setter
 @Table(name = "services")
 @Entity
-public class service extends baseEnitiy {
+public class Service extends BaseEnitiy {
   private String name;
 }

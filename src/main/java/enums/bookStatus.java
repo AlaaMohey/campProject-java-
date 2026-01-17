@@ -1,6 +1,6 @@
 package enums;
 
-public enum bookStatus {
+public enum BookStatus {
 waiting,
 approved,
 canceled

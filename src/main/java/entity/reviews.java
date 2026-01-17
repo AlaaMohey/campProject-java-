@@ -12,7 +12,7 @@ import lombok.Setter;
 @Table(name = "reviews")
    
  @Entity
-public class reviews  extends baseEnitiy {
+public class Reviews  extends BaseEnitiy {
    
 private Integer rating;
 
@@ -21,10 +21,10 @@ private Integer rating;
 
     @ManyToOne
     @JoinColumn(name = "camp_id")
-                private camp camp;
+                private Camp camp;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
-    private user user;
+    private User user;
  
 }

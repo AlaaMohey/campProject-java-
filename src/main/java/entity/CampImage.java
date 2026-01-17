@@ -11,10 +11,10 @@ import lombok.Setter;
 @Setter
 @Table(name = "cmp_images")
 @Entity
-public class camp_image {
+public class CampImage {
     private String imageUrl;
 
     @ManyToOne
     @JoinColumn(name = "camp_id")
-    private camp camp;
+    private Camp camp;
 }

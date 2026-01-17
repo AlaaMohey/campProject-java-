@@ -12,13 +12,12 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
-import entity.user;
 @Getter
 @Setter
 @Entity
 
 @Table(name = "camps")
-public class camp  extends baseEnitiy {
+public class Camp  extends BaseEnitiy {
     @Column(nullable = false)
     private String name;
 
@@ -36,7 +35,7 @@ public class camp  extends baseEnitiy {
    // صاحب المخيم
     @ManyToOne
     @JoinColumn(name = "owner_id")
-    private user owner;
+    private User owner;
 
 @ManyToMany
    @JoinTable(
@@ -44,5 +43,5 @@ public class camp  extends baseEnitiy {
             joinColumns = @JoinColumn(name = "camp_id"),
             inverseJoinColumns = @JoinColumn(name = "service_id")
     )
-        private List<service> services;
+        private List<Service> services;
 }

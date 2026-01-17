@@ -1,6 +1,6 @@
 package enums;
 
-public enum bookingTypes {
+public enum BookingTypes {
 day_use,
 overnight
 }
