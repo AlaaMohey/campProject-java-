@@ -1,7 +1,7 @@
 package entity;
 
-import enums.bookStatus;
-import enums.bookingTypes;
+import enums.BookStatus;
+import enums.BookingTypes;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -26,9 +26,9 @@ public class booking  extends BaseEnitiy {
     private Camp customer;
 
     @Enumerated(EnumType.STRING)
-    private bookingTypes bookingType = bookingTypes.day_use; // day_use or overnight
+    private BookingTypes bookingType = BookingTypes.day_use; // day_use or overnight
 
 @Enumerated(EnumType.STRING)
-    private bookStatus status = bookStatus.waiting; // waiting, approved, canceled
+    private BookStatus status = BookStatus.waiting; // waiting, approved, canceled
  
 }

@@ -15,7 +15,7 @@ public class User extends BaseEnitiy {
     private String name;
     @Column(unique =  true)
     private String email;
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING) 
     private enums.UserRole role;
     private Boolean isActive = true;
 

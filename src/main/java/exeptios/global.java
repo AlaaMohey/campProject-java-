@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class Global {
 @ExceptionHandler(ResurceNotFound.class)
     public ApiRes<String> handleResourceNotFound(ResurceNotFound ex) {
-        return new ApiRes<>("Resource not found", false, ex.getMessage());
+        return new ApiRes<String>("Resource not found", false, ex.getMessage());
     }
     //     @ExceptionHandler(Exception.class)
     // public ResponseEntity<apiRes<Object>> handleGeneral(Exception ex) {
