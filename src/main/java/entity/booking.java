@@ -16,7 +16,7 @@ import lombok.Setter;
 @Table(name = "bookings")
    
  @Entity
-public class booking  extends BaseEnitiy {
+public class Booking  extends BaseEnitiy {
      @ManyToOne
     @JoinColumn(name = "camp_id")
     private Camp camp;
